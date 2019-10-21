@@ -1,2 +1,3 @@
-#Register into Triage https://tria.ge to get your API KEY
-[COPY YOUR API KEY HERE]
+# Register into Triage https://tria.ge to get your API KEY
+# this API KEY will expire in few weeks
+DznUL3OloLof5tS9Ku_hGZ2im0V_WTuVERVvRqToiC4:gKufS4Nmdtcc9b6azSQocKkWSALCgbYMT0FyIRdbxbE
