@@ -280,9 +280,10 @@ Even having all the knowledge of how the protocol works (from the client side) c
   * Time and day. I noticed that on weekends the botnets are not usually active so you have to take this into account. Also the time at which you connect can also affect the time to have an answer or another from the C&C.
 
 # Interesting related articles
-  1. **[Exploring Emotet, an elaborate everyday enigma](https://www.virusbulletin.com/uploads/pdf/conference_slides/2019/VB2019-Nagy.pdf)** - [Luca Nagy](https://twitter.com/luca_nagy_)
+  1. **[Analysis of Emotet v4]**(https://www.cert.pl/en/news/single/analysis-of-emotet-v4/) - Paweł Srokosz
+  2. **[Exploring Emotet, an elaborate everyday enigma](https://www.virusbulletin.com/uploads/pdf/conference_slides/2019/VB2019-Nagy.pdf)** - [Luca Nagy](https://twitter.com/luca_nagy_)
 
-  2. **[Emotet: The Tricky Trojan that ‘Git Clones](https://research.checkpoint.com/emotet-tricky-trojan-git-clones/)** - Ofer Caspi, Ben Herzog
+  3. **[Emotet: The Tricky Trojan that ‘Git Clones](https://research.checkpoint.com/emotet-tricky-trojan-git-clones/)** - Ofer Caspi, Ben Herzog
 
 # Last notes
 
