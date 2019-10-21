@@ -1,0 +1,30 @@
+syntax = "proto2";
+
+message HostInfo {
+    required int32 scmanager = 1;
+    required string bot_id = 2;
+    required int32 arch = 3;
+    required int32 session_id = 4;
+    required fixed32 file_crc32 = 5;
+    required string proccess_list = 6;
+    required string unknown = 7;
+}
+
+message C2Request {
+    required int32 command = 1;
+    required bytes data = 2;
+}
+
+message C2Response {
+    required int32 status = 1;
+    optional bytes file = 2;
+    optional bytes modules = 3;
+}
+
+message Module {
+    required int32 id = 1;
+    required int32 action = 2;
+    required bytes data = 3;
+}
+
+

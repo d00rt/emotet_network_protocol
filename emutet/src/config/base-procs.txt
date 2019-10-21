@@ -1,0 +1,12 @@
+explorer.exe
+dwm.exe
+sppsvc.exe
+msdtc.exe
+spoolsv.exe
+lsm.exe
+lsass.exe
+services.exe
+winlogon.exe
+wininit.exe
+csrss.exe
+smss.exe

@@ -1,0 +1,7 @@
+rnd.exe
+serv.exe
+drpbx.exe
+cmd.exe
+iexplore.exe
+firefox.exe
+chrome.exe

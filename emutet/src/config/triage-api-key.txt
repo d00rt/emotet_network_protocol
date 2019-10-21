@@ -1,0 +1,2 @@
+#Register into Triage https://tria.ge to get your API KEY
+[COPY YOUR API KEY HERE]
