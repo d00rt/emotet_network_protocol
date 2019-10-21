@@ -18,7 +18,7 @@ That's why in this repository there is also the code used to emulate Emotet's co
 > Remember to install all requeriments first 
 
 **Triage**
-Given the following cape analysis https://tria.ge/reports/191017-h6k7yj8vq6/task1
+Given the following triage analysis https://tria.ge/reports/191017-h6k7yj8vq6/task1
 ```
 cd emutet
 python emutet.py -T --triage 191017-h6k7yj8vq6
@@ -286,7 +286,7 @@ Even having all the knowledge of how the protocol works (from the client side) c
 
 # Last notes
 
-The Emoter network protocol may change after this release, sorry to all researchers who will have to modify the bot. I've seen how the protocol has changed 3 times since I've been following this family, so if not for this reason they would change it for another reason.
+The Emotet network protocol may change after this release, sorry to all researchers who will have to modify the bot. I've seen how the protocol has changed 3 times since I've been following this family, so if not for this reason they would change it for another reason.
 
 I hope at least that it helps the community to trace this family (until the protocol changes) and that people who are starting in this world know how these advanced malwares work and how to trace them.
 
