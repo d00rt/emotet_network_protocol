@@ -30,6 +30,7 @@ class EmotetEmulator():
     HOST_UNKVALUE = None
     AES_KEY = None
 
+
     def __init__(self, keyfilename, ipsfilename, cape=None, triage=None, hostname=None, useragent=None):
         if cape:
             self.import_pbk_and_cncs_from_cape(cape)
@@ -40,6 +41,7 @@ class EmotetEmulator():
             self.import_cncs(ipsfilename)
 
         self.AES_KEY = self._get_random_aes_key()
+        self.CRC32 = 0xF3BAD2A6 #0x00 #0xBCD02C92 #0x9AEC529E #struct.unpack("=L", self.AES_KEY[:4])[0] # Get a random value for the first requests
         self.CRC32 = struct.unpack("=L", self.AES_KEY[:4])[0] # Get a random value for the first requests
         self.NATIVE_SYSTEM_INFO_ARCH = 0 + 0x19E74 # On many samples of emotet they add the value 0x19E74 to this value
         self.HOST_RUNNING_PROC = self._get_running_proc()
@@ -49,7 +51,7 @@ class EmotetEmulator():
         if hostname:
             self.HOSTNAME = hostname + '_E00FFE62'
         else:
-            self.HOSTNAME = self._get_hostname().split("_")[0]
+            self.HOSTNAME = self._get_hostname()
 
         self.HOSTNAME_LEN = len(self.HOSTNAME)
 
@@ -65,10 +67,7 @@ class EmotetEmulator():
         self.HOST_RUNNING_PROC = self._get_running_proc()
         self.HOST_UNKVALUE = ""
         self.SESSION_ID = 1
-        if self.CRC32 % 2 == 0:
-            self.HOSTNAME = self._get_hostname().split("_")[0]
-        else:
-            self.HOSTNAME = self._get_hostname()
+        self.HOSTNAME = self._get_hostname()
 
         self.HOSTNAME_LEN = len(self.HOSTNAME)
         self.USER_AGENT = self._get_user_agent()
@@ -105,12 +104,13 @@ class EmotetEmulator():
         surnames = emoutils.parse_bot_config_file(filename)
 
         auxi = [
-            "pc",
+            "PC",
 #            "computer",
 #            "personal",
         ]
+        name = random.choice(names) + random.choice(surnames) + "X" + random.choice(auxi)
 
-        return (random.choice(names) + random.choice(surnames) + random.choice(auxi) + "_E00FFE62").upper()
+        return "{0}_{1:08X}".format(name, struct.unpack("=L", self.AES_KEY[:4])[0] >> 1).upper()
 
     def _get_bot_info(self):
         bot_info = emotet_pb2.HostInfo()
@@ -213,7 +213,7 @@ class EmotetEmulator():
         path = []
         filename = os.path.join(PROJECT_PATH, "config/url-path-words.txt")
         valid_words = emoutils.parse_bot_config_file(filename)
-        for i in range(random.randint(1, 8)):
+        for i in range(random.randint(1, 3)):
             idx = random.randint(0, len(valid_words) - 1)
             path.append(valid_words[idx])
 
