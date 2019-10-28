@@ -41,7 +41,7 @@ class EmotetEmulator():
             self.import_cncs(ipsfilename)
 
         self.AES_KEY = self._get_random_aes_key()
-        self.CRC32 = 0xF3BAD2A6 #0x00 #0xBCD02C92 #0x9AEC529E #struct.unpack("=L", self.AES_KEY[:4])[0] # Get a random value for the first requests
+        self.CRC32 = 0x41B96EEB #0x00 #0xBCD02C92 #0x9AEC529E #struct.unpack("=L", self.AES_KEY[:4])[0] # Get a random value for the first requests
         self.CRC32 = struct.unpack("=L", self.AES_KEY[:4])[0] # Get a random value for the first requests
         self.NATIVE_SYSTEM_INFO_ARCH = 0 + 0x19E74 # On many samples of emotet they add the value 0x19E74 to this value
         self.HOST_RUNNING_PROC = self._get_running_proc()
@@ -105,12 +105,17 @@ class EmotetEmulator():
 
         auxi = [
             "PC",
-#            "computer",
-#            "personal",
+            "",
+            #"computer",
+            #"personal",
         ]
-        name = random.choice(names) + random.choice(surnames) + "X" + random.choice(auxi)
+        aux = random.choice(auxi)
+        rr = ""
+        if aux != "":
+            rr = random.choice(["X", ""])
+        name = random.choice(names) + random.choice(surnames) + rr + aux
 
-        return "{0}_{1:08X}".format(name, struct.unpack("=L", self.AES_KEY[:4])[0] >> 1).upper()
+        return "{0}_E00FF{1:03X}".format(name, 0xFFF & struct.unpack("=L", self.AES_KEY[:4])[0]).upper()
 
     def _get_bot_info(self):
         bot_info = emotet_pb2.HostInfo()
