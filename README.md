@@ -18,7 +18,7 @@ That's why in this repository there is also the code used to emulate Emotet's co
 > Remember to install all requeriments first 
 
 **Triage**
-Given the following cape analysis https://tria.ge/reports/191017-h6k7yj8vq6/task1
+Given the following triage analysis https://tria.ge/reports/191017-h6k7yj8vq6/task1
 ```
 cd emutet
 python emutet.py -T --triage 191017-h6k7yj8vq6
@@ -210,33 +210,35 @@ Not all files downloaded from the botnet are modules of Emotet itself. Executabl
 
 The file [emotet_botnet_malware.zip](https://mega.nz/#!Pt1TwQ7b!OwFW8T5mhJ7sX0S_LmZvfZJpooBAp_9BhPaRiv8t7Bg) contains these files. The password is `d00rt-emotet`.
 
+
+
 |                     SHA-1                |  FAMILY  |                    REPORT                       |
 | ---------------------------------------- | -------- | ----------------------------------------------- |
-| 1aea1121475df57b5802c84583c4dc89500baa75 | Trickbot | https://tria.ge/reports/191018-5prbh9aams/task1 |
-| 1bbbae729c33ea1ff7f99ddca6317e05a4242d63 | Ursnif   | https://tria.ge/reports/191018-jyewsk7k72/task1 |
-| 2eb72c4993a981c9480427c83338105bcd0d863d | Trickbot | https://tria.ge/reports/191018-m9ktjhnaq6/task1 |
-| 2f8b0b6435ca18da75e8ae2e6745718124a26f66 | Trickbot | https://tria.ge/reports/191018-dj47fcq5ta/task1 |
-| 30ebf4174d1703dd66d867ba65cd015d3604c938 | Trickbot | https://tria.ge/reports/191018-9z5rvjxg6s/task1 |
-| 36c09a576e35a70e5400c545c19f3ad5420e4c33 | Trickbot | https://tria.ge/reports/191018-j1rn7h112e/task1 |
-| 3ab810973efe13af16639485547817bf1a84bb84 | Trickbot | https://tria.ge/reports/191018-hqb4vww18x/task1 |
-| 41ed194a7310eae9620d1b4facfbc33fb246c079 | Trickbot | https://tria.ge/reports/191018-h4wh8mye46/task1 |
-| 428f9a2b4cbc33879806996a030c02f0e60521b9 | Trickbot | https://tria.ge/reports/191018-xkfwrmh4f2/task1 |
-| 42cb5218b9b949231f3c601715e80aab3d416f91 | Ursnif   | https://tria.ge/reports/191018-ze7jdhqtg6/task1 |
-| 4fa87ea1426e9d02c0aebe5fdefd03b42cb6640a | Trickbot | https://tria.ge/reports/191018-8bvc9711j2/task1 |
-| 5abdb8b16f503976c3e726521c1f93b927931c00 | Ursnif   | https://tria.ge/reports/191018-xssrgacz7s/task1 |
-| 60ae3209413136b40ab2b4fcd11884d6dfeb330b | Trickbot | https://tria.ge/reports/191018-5dpavxa8bj/task1 |
-| 74e9f572b117ae54bbe6d3055332117071bc6e40 | Trickbot | https://tria.ge/reports/191018-yl64kemqrx/task1 |
-| 8ad35f111142e94599955379dad6fe8040789f0b | Ursnif   | https://tria.ge/reports/191018-6cbxhgqhwx/task1 |
-| 8ec9d7a0c950e4f013f9afc76d807e597d7cad9a | Ursnif   | https://tria.ge/reports/191018-qqj5ysk7q6/task1 |
-| 9193eaeff8fff6c8b09dc370b9e60ddab5b121a3 | Ursnif   | https://tria.ge/reports/191018-z54frb66pa/task1 |
-| 9957fe40ae9a7a2630593fd82544d4ea39ca47d7 | Trickbot | https://tria.ge/reports/191018-pjatzgm2xn/task1 |
-| a038cf5f99d17df1e223aaf2f5f80b4b4a440a4e | Ursnif   | https://tria.ge/reports/191018-7wl797zm62/task1 |
-| b70119e477f01a901a14a0378ced471f93cee7f6 | Trickbot | https://tria.ge/reports/191018-n76fe2empj/task1 |
-| d0a308811bd0cf98b7f3c13328f34e192ae9f07c | Ursnif   | https://tria.ge/reports/191018-dhmnstln9e/task1 |
-| ecf315df8321b5bee5395cff7add2206d385dab0 | Trickbot | https://tria.ge/reports/191018-tgvqksr3x6/task1 |
-| eed62d01218a450c4130ca196256b90cb815a987 | Trickbot | https://tria.ge/reports/191018-jnffne1l7x/task1 |
-| f0a6bef71d57feee7c036899edc337bc1fb69160 | Trickbot | https://tria.ge/reports/191018-tfbpyxqage/task1 |
-| fec98b8cdd890124ce5c203a64b38050f5459801 | Trickbot | https://tria.ge/reports/191018-qj96et9cnj/task1 |
+| 1aea1121475df57b5802c84583c4dc89500baa75 | Trickbot | <a href="https://tria.ge/reports/191018-5prbh9aams/task1"> View report</a> |
+| 1bbbae729c33ea1ff7f99ddca6317e05a4242d63 | Ursnif   | <a href="https://tria.ge/reports/191018-jyewsk7k72/task1"> View report</a> |
+| 2eb72c4993a981c9480427c83338105bcd0d863d | Trickbot | <a href="https://tria.ge/reports/191018-m9ktjhnaq6/task1"> View report</a> |
+| 2f8b0b6435ca18da75e8ae2e6745718124a26f66 | Trickbot | <a href="https://tria.ge/reports/191018-dj47fcq5ta/task1"> View report</a> |
+| 30ebf4174d1703dd66d867ba65cd015d3604c938 | Trickbot | <a href="https://tria.ge/reports/191018-9z5rvjxg6s/task1"> View report</a> |
+| 36c09a576e35a70e5400c545c19f3ad5420e4c33 | Trickbot | <a href="https://tria.ge/reports/191018-j1rn7h112e/task1"> View report</a> |
+| 3ab810973efe13af16639485547817bf1a84bb84 | Trickbot | <a href="https://tria.ge/reports/191018-hqb4vww18x/task1"> View report</a> |
+| 41ed194a7310eae9620d1b4facfbc33fb246c079 | Trickbot | <a href="https://tria.ge/reports/191018-h4wh8mye46/task1"> View report</a> |
+| 428f9a2b4cbc33879806996a030c02f0e60521b9 | Trickbot | <a href="https://tria.ge/reports/191018-xkfwrmh4f2/task1"> View report</a> |
+| 42cb5218b9b949231f3c601715e80aab3d416f91 | Ursnif   | <a href="https://tria.ge/reports/191018-ze7jdhqtg6/task1"> View report</a> |
+| 4fa87ea1426e9d02c0aebe5fdefd03b42cb6640a | Trickbot | <a href="https://tria.ge/reports/191018-8bvc9711j2/task1"> View report</a> |
+| 5abdb8b16f503976c3e726521c1f93b927931c00 | Ursnif   | <a href="https://tria.ge/reports/191018-xssrgacz7s/task1"> View report</a> |
+| 60ae3209413136b40ab2b4fcd11884d6dfeb330b | Trickbot | <a href="https://tria.ge/reports/191018-5dpavxa8bj/task1"> View report</a> |
+| 74e9f572b117ae54bbe6d3055332117071bc6e40 | Trickbot | <a href="https://tria.ge/reports/191018-yl64kemqrx/task1"> View report</a> |
+| 8ad35f111142e94599955379dad6fe8040789f0b | Ursnif   | <a href="https://tria.ge/reports/191018-6cbxhgqhwx/task1"> View report</a> |
+| 8ec9d7a0c950e4f013f9afc76d807e597d7cad9a | Ursnif   | <a href="https://tria.ge/reports/191018-qqj5ysk7q6/task1"> View report</a> |
+| 9193eaeff8fff6c8b09dc370b9e60ddab5b121a3 | Ursnif   | <a href="https://tria.ge/reports/191018-z54frb66pa/task1"> View report</a> |
+| 9957fe40ae9a7a2630593fd82544d4ea39ca47d7 | Trickbot | <a href="https://tria.ge/reports/191018-pjatzgm2xn/task1"> View report</a> |
+| a038cf5f99d17df1e223aaf2f5f80b4b4a440a4e | Ursnif   | <a href="https://tria.ge/reports/191018-7wl797zm62/task1"> View report</a> |
+| b70119e477f01a901a14a0378ced471f93cee7f6 | Trickbot | <a href="https://tria.ge/reports/191018-n76fe2empj/task1"> View report</a> |
+| d0a308811bd0cf98b7f3c13328f34e192ae9f07c | Ursnif   | <a href="https://tria.ge/reports/191018-dhmnstln9e/task1"> View report</a> |
+| ecf315df8321b5bee5395cff7add2206d385dab0 | Trickbot | <a href="https://tria.ge/reports/191018-tgvqksr3x6/task1"> View report</a> |
+| eed62d01218a450c4130ca196256b90cb815a987 | Trickbot | <a href="https://tria.ge/reports/191018-jnffne1l7x/task1"> View report</a> |
+| f0a6bef71d57feee7c036899edc337bc1fb69160 | Trickbot | <a href="https://tria.ge/reports/191018-tfbpyxqage/task1"> View report</a> |
+| fec98b8cdd890124ce5c203a64b38050f5459801 | Trickbot | <a href="https://tria.ge/reports/191018-qj96et9cnj/task1"> View report</a> |
 
 ### Country
 
@@ -278,13 +280,14 @@ Even having all the knowledge of how the protocol works (from the client side) c
   * Time and day. I noticed that on weekends the botnets are not usually active so you have to take this into account. Also the time at which you connect can also affect the time to have an answer or another from the C&C.
 
 # Interesting related articles
-  1. **[Exploring Emotet, an elaborate everyday enigma](https://www.virusbulletin.com/uploads/pdf/conference_slides/2019/VB2019-Nagy.pdf)** - [Luca Nagy](https://twitter.com/luca_nagy_)
+  1. **[Analysis of Emotet v4]**(https://www.cert.pl/en/news/single/analysis-of-emotet-v4/) - Paweł Srokosz
+  2. **[Exploring Emotet, an elaborate everyday enigma](https://www.virusbulletin.com/uploads/pdf/conference_slides/2019/VB2019-Nagy.pdf)** - [Luca Nagy](https://twitter.com/luca_nagy_)
 
-  2. **[Emotet: The Tricky Trojan that ‘Git Clones](https://research.checkpoint.com/emotet-tricky-trojan-git-clones/)** - Ofer Caspi, Ben Herzog
+  3. **[Emotet: The Tricky Trojan that ‘Git Clones](https://research.checkpoint.com/emotet-tricky-trojan-git-clones/)** - Ofer Caspi, Ben Herzog
 
 # Last notes
 
-The Emoter network protocol may change after this release, sorry to all researchers who will have to modify the bot. I've seen how the protocol has changed 3 times since I've been following this family, so if not for this reason they would change it for another reason.
+The Emotet network protocol may change after this release, sorry to all researchers who will have to modify the bot. I've seen how the protocol has changed 3 times since I've been following this family, so if not for this reason they would change it for another reason.
 
 I hope at least that it helps the community to trace this family (until the protocol changes) and that people who are starting in this world know how these advanced malwares work and how to trace them.
 
