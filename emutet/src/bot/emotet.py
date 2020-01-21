@@ -88,8 +88,9 @@ class EmotetEmulator():
         filename = os.path.join(PROJECT_PATH, "config/random-procs.txt")
         random_procs = emoutils.parse_bot_config_file(filename)
 
+        random.shuffle(base_procs)
         procs = base_procs
-        for i in range(random.randint(1, 13)):
+        for i in range(random.randint(1, 8)):
             idx = random.randint(0, len(random_procs) - 1)
             procs.append(random_procs[idx])
 
@@ -105,17 +106,17 @@ class EmotetEmulator():
 
         auxi = [
             "PC",
-            "",
+            #"",
             #"computer",
             #"personal",
         ]
         aux = random.choice(auxi)
         rr = ""
         if aux != "":
-            rr = random.choice(["X", ""])
+            rr = random.choice(["X", "a"])
         name = random.choice(names) + random.choice(surnames) + rr + aux
 
-        return "{0}_E00FF{1:03X}".format(name, 0xFFF & struct.unpack("=L", self.AES_KEY[:4])[0]).upper()
+        return "{0}_{1:08X}".format(name, 0xFFFFFFFF & struct.unpack("=L", self.AES_KEY[:4])[0]).upper()
 
     def _get_bot_info(self):
         bot_info = emotet_pb2.HostInfo()
@@ -209,7 +210,7 @@ class EmotetEmulator():
     def _get_headers(self, cnc, path):
         return {
             "User-Agent": self.USER_AGENT,
-            "Referer": "http://{cnc}/{path}/".format(cnc=cnc.split(':')[0], path=path),
+            "Referer": "http://{cnc}/{path}".format(cnc=cnc.split(':')[0], path=path),
             "Content-Type": "application/x-www-form-urlencoded",
             "DNT": "1"
         }
@@ -225,7 +226,7 @@ class EmotetEmulator():
         return '/'.join(path)
 
     def _get_url_var(self):
-        return ''.join(random.choice(string.ascii_lowercase + string.ascii_uppercase + '0123456789') for i in range(random.randint(4, 16)))
+        return ''.join(random.choice(string.ascii_lowercase + string.ascii_uppercase + '0123456789') for i in range(random.randint(6, 12)))
 
     def do_task(self, cnc):
         payload = self.generate_payload()
@@ -233,10 +234,10 @@ class EmotetEmulator():
 
         url_var = self._get_url_var()
         path = self._get_path()
-        headers = self._get_headers(cnc, path)
+        headers = self._get_headers(cnc, url_var)
 
         try:
-            result = requests.post("http://{cnc}/{path}".format(cnc=cnc, path=path), data={url_var: b64en_payload}, headers=headers, stream=True, timeout=5)
+            result = requests.post("http://{cnc}/{path}".format(cnc=cnc, path=url_var), data={url_var: b64en_payload}, headers=headers, stream=True, timeout=5)
             buff = result.raw.read()
             if len(buff):
                 dec_command = self._decrypt_command(buff)

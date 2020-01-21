@@ -1,7 +1,9 @@
-rnd.exe
-serv.exe
-drpbx.exe
 cmd.exe
 iexplore.exe
 firefox.exe
 chrome.exe
+powershell.exe
+svchost.exe
+svchost.exe
+metin2.exe
+steam.exe
